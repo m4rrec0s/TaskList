@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fdeede;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  margin-top: 50%;
+  display: inline-block;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
