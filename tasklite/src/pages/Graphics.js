@@ -1,10 +1,9 @@
 import Menu from '../components/Menu'
 
-export default function About() {
+export default function graphics() {
     return(
         <>
             <Menu />
-            <h1>About</h1>
         </>
     )
 }
