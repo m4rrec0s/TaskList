@@ -46,3 +46,24 @@ div.presentation > button.day:hover {
     background-color: var(--hover-color-dois);
     cursor: pointer;
 }
+
+div.container-graphics {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.graphic {
+    width: 213.3px;
+    height: 150px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: var(--menu-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.graphic h3 {
+    color: var(--font);
+    font-size: 30px;
+}

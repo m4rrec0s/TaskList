@@ -15,6 +15,17 @@ const Home = () => {
                         <p>13:00 pm</p>
                     </button>
             </div>
+            <div className='container-graphics'>
+                <div className='graphic'>
+                    <h3>graphic 1</h3>
+                </div>
+                <div className='graphic'>
+                    <h3>graphic 2</h3>
+                </div>
+                <div className='graphic'>
+                    <h3>graphic 3</h3>
+                </div>
+            </div>
         </main>
     )
 }
