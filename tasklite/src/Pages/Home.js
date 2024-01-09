@@ -1,11 +1,9 @@
-import Menu from '../components/Menu.jsx'
+import '../css/App.css'
 
 export default function Home() {
     return (
         <>
-            <Menu />
-            <h1>Pagina inicial</h1>
+            <h1>Página Inicial</h1>
         </>
     )
-
 }

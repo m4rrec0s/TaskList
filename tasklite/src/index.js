@@ -6,11 +6,23 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import App from './App'
+import Home from './Pages/Home'
+import Graphics from "./Pages/Graphics";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "graphics",
+        element: <Graphics />,
+      },
+    ]
   },
 ]);
 
