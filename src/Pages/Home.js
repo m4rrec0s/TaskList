@@ -1,5 +1,6 @@
 import '../css/App.css'
 import '../css/Home.css'
+import Menu from '../components/Menu';
 
 import React from 'react'
 
