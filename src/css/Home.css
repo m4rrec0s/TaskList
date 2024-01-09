@@ -1,0 +1,48 @@
+:root {
+    --back: #1E1C29;
+    --primary: #4163D1;
+    --menu-color: #252537;
+    --menu-color-hover: #4e4e69;
+    --hover-color: #6B83E5;
+    --hover-color-dois: #344381;
+    --font: #fff;
+}
+
+div.content-center main#content {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+main#content > div.presentation {
+    position: relative; /* Adicionado position: relative; */
+    width: 700px;
+    height: 180px;
+    background: var(--primary) url('../image/background-image.png') center no-repeat;
+    background-size: 105%;
+    border-radius: 15px;
+}
+
+div.presentation > button.day {
+    position: absolute; /* Adicionado position: absolute; */
+    top: 15px; /* Ajuste a distância superior conforme necessário */
+    left: 15px; /* Ajuste a distância à esquerda conforme necessário */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: var(--hover-color);
+    width: 150px;
+    padding: 8px;
+    color: var(--font);
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+div.presentation > button.day p {
+    font-size: 12px;
+}
+
+div.presentation > button.day:hover {
+    background-color: var(--hover-color-dois);
+    cursor: pointer;
+}
