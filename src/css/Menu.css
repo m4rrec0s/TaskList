@@ -52,7 +52,7 @@ div.icones {
   gap: 15px;
 }
 
-div.icones button, a {
+div.icones button {
   background: transparent;
   border: none;
   padding: 10px;
@@ -60,7 +60,7 @@ div.icones button, a {
   transition: background-color 0.5s ease-in-out;
 }
 
-div.icones button:hover, a:hover {
+div.icones button:hover {
   cursor: pointer;
   background: var(--hover-color);
 }

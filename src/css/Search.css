@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+:root {
+    --back: #1E1C29;
+    --primary: #4163D1;
+    --menu-color: #252537;
+    --menu-color-hover: #4e4e69;
+    --hover-color: #6B83E5;
+}
+
+div.content-center {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+div.superior{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 700px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.superior input {
+    width: 400px;
+    padding: 15px;
+    background-color: var(--menu-color);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+
+div.superior > .buttons-superior button {
+    padding: 15px;
+    background-color: var(--menu-color);
+    border: none;
+    margin-left: 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+div.superior > .buttons-superior button:hover {
+    background-color: var(--hover-color);
+}
