@@ -60,6 +60,21 @@ function DefaultMenu() {
         </div>
         <Outlet />
       </div>
+
+      <div className='profile-content'>
+        <div className='account'>
+          <div className='space-button'>
+              <button>Account</button>
+          </div>
+        </div>
+
+        <div className='recent-tasks'>
+          <div className='top-recents-tasks'>
+            <h3>Recents Tasks</h3>
+          </div>
+        </div>
+        <button className='add-new-task'>Add New Task</button>
+      </div>
     </div>
   )
 }

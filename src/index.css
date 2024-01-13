@@ -15,7 +15,6 @@ body {
   background-color: var(--back);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+div#root {
+  display: flex;
 }

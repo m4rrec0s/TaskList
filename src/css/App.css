@@ -8,20 +8,15 @@
   --back: #1E1C29;
   --primary: #4163D1;
   --menu-color: #252537;
+  --profile-color: #222538;
   --menu-color-hover: #4e4e69;
   --hover-color: #6B83E5;
 }
 
 div.App {
   display: flex;
-  max-width: 1400px;
-  height: 100%;
-  background: var(--back);
   flex-direction: row;
   flex-wrap: wrap;
-  align-content: center;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
 div.barraLateral {
@@ -83,29 +78,34 @@ div.exit button:hover {
 }
 
 div.content-center {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  flex-wrap: nowrap;
-  align-items: flex-start;
+  display: grid;
+  align-content: stretch;
+  align-items: baseline;
+  justify-items: start;
 }
 
 div.superior{
   margin-top: 20px;
   margin-left: 20px;
-  width: 700px;
+  width: 800px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 div.superior input {
-  width: 400px;
+  width: 500px;
   padding: 15px;
   background-color: var(--menu-color);
   border: none;
+  outline: none;
   border-radius: 10px;
   color: #fff;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+div.superior input:focus {
+  box-shadow: 0px 0px 8px #d3d3d341;
 }
 
 div.superior > .buttons-superior button {
@@ -118,5 +118,82 @@ div.superior > .buttons-superior button {
 }
 
 div.superior > .buttons-superior button:hover {
+  background-color: var(--hover-color);
+}
+
+div.profile-content {
+  display: grid;
+  align-content: stretch;
+  align-items: baseline;
+  justify-items: stretch;
+  margin: 20px 20px 0px 20px;
+}
+
+div.profile-content > div.account {
+    width: 350px;
+    height: 230px;
+    background-color: var(--profile-color);
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px #00000031;
+}
+
+div.account > div.space-button {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary);
+  border-radius: 20px 20px 0 0;
+}
+
+div.space-button > button {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  font-size: 18px;
+  color: #fff;
+  padding: 30px;
+  border-radius: 20px 20px 0 0;
+  font-weight: 700;
+  transition: background-color 0.3s ease-in-out;
+}
+
+div.space-button > button:hover {
+  background-color: var(--hover-color);
+}
+
+div.profile-content > div.recent-tasks {
+  width: 350px;
+  height: 240px;
+  background-color: var(--profile-color);
+  border-radius: 20px;
+  box-shadow: 0px 0px 4px #00000031;
+}
+
+div.recent-tasks > div.top-recents-tasks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+}
+
+div.top-recents-tasks > h3 {
+  color: #fff;
+}
+
+
+button.add-new-task {
+  display: block;
+  padding: 20px;
+  background-color: var(--primary);
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 0px 4px #00000031;
+  font-size: 18px;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button.add-new-task:hover {
   background-color: var(--hover-color);
 }

@@ -26,6 +26,14 @@ const Home = () => {
           <h3>graphic 3</h3>
         </div>
       </div>
+      <div className='container-statistics'>
+        <div className='statistic'>
+          <h3>statistic 1</h3>
+        </div>
+        <div className='statistic'>
+          <h3>statistic 2</h3>
+        </div>
+      </div>
     </main>
   )
 }
