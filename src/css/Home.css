@@ -20,11 +20,25 @@ main#content > div.presentation {
     position: relative; /* Adicionado position: relative; */
     width: 800px;
     height: 180px;
+    display: flex;
     background: var(--primary) url('../image/background-image.png') center no-repeat;
     background-size: 102%;
     border-radius: 15px;
     box-shadow: 0px 0px 4px #00000031;
     transition: box-shadow 0.3s ease-in-out;
+}
+
+main#content > div.presentation > div.greeting {
+    color: #fff;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 0 10px 10px;
+}
+
+main#content > div.presentation > div.greeting h1, p {
+    text-shadow: 0px 0px 2px var(--menu-color) ;
 }
 
 main#content > div.presentation:hover {

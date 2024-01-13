@@ -139,25 +139,69 @@ div.profile-content > div.account {
 
 div.account > div.space-button {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   background-color: var(--primary);
-  border-radius: 20px 20px 0 0;
+  border-radius: 10px;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+div.account > div.space-button h2 {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 div.space-button > button {
-  background-color: transparent;
+  background-color: var(--hover-color);
   border: none;
-  width: 100%;
-  font-size: 18px;
-  color: #fff;
-  padding: 30px;
-  border-radius: 20px 20px 0 0;
-  font-weight: 700;
+  padding: 10px;
+  border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
 }
 
 div.space-button > button:hover {
-  background-color: var(--hover-color);
+  background-color: var(--profile-color);
+}
+
+div.account > div.account-content {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+div.account-content > div.img-container{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: var(--menu-color) url('../image/&.jpeg') center no-repeat;
+  background-size: 105%;
+}
+
+div.account-content > div.login-content {
+  display: flex;
+  flex-direction: column;
+  align-items:  flex-start;
+}
+
+div.account-content > div.login-content h3 {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+div.account-content > div.login-content p {
+  color: #ffffffa8;
+  font-size: 14px;
+  font-weight: normal;
 }
 
 div.profile-content > div.recent-tasks {
@@ -170,17 +214,39 @@ div.profile-content > div.recent-tasks {
 
 div.recent-tasks > div.top-recents-tasks {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   background-color: var(--primary);
-  padding: 20px;
-  border-radius: 20px 20px 0 0;
+  border-radius: 10px;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  padding: 8px;
 }
 
-div.top-recents-tasks > h3 {
+div.top-recents-tasks > h2 {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
   color: #fff;
+  text-transform: uppercase;
 }
 
+div.top-recents-tasks > button {
+  display: flex;
+  background-color: var(--hover-color);
+  border: none;
+  padding: 10px;
+  align-content: stretch;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+div.top-recents-tasks > button > p {
+  color: #fff;
+  font-weight: 700;
+  margin-right: 10px;
+}
 
 button.add-new-task {
   display: block;

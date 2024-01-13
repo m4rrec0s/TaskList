@@ -64,13 +64,31 @@ function DefaultMenu() {
       <div className='profile-content'>
         <div className='account'>
           <div className='space-button'>
-              <button>Account</button>
+              <h2>My profile</h2>
+              <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 40 40" fill="none">
+                  <path d="M30 0L25 5L35 15L40 10L30 0ZM20 10L0 30V40H10L30 20L20 10Z" fill="white"/>
+                </svg>
+              </button>
+          </div>
+          <div className='account-content'>
+            <div className='img-container'></div>
+            <div className='login-content'>
+              <h3>Hannah</h3>
+              <p>hannah_martinez@gmail.com</p>
+            </div>
           </div>
         </div>
 
         <div className='recent-tasks'>
           <div className='top-recents-tasks'>
-            <h3>Recents Tasks</h3>
+            <h2>Recents Tasks</h2>
+            <button>
+              <p>January</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 49 33" fill="none">
+                <path d="M9.0538 0L0 8.84925L24.1435 32.4473L48.2869 8.84925L39.2331 0L24.1435 14.7488L9.0538 0Z" fill="white"/>
+              </svg>
+            </button>
           </div>
         </div>
         <button className='add-new-task'>Add New Task</button>

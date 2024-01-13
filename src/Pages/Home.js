@@ -14,6 +14,10 @@ const Home = () => {
           <p>Jan 09.2024</p>
           <p>13:00 pm</p>
         </button>
+        <div className='greeting'>
+          <h1>Good Day, Hannah!</h1>
+          <p>Have a great Monday!</p>
+        </div>
       </div>
       <div className='container-graphics'>
         <div className='graphic'>
