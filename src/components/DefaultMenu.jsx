@@ -2,7 +2,7 @@ import '../css/App.css'
 import { Outlet } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faHome, faChartSimple, faListCheck, faCalendar, faMessage, faRightFromBracket, faBell, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faHome, faChartSimple, faListCheck, faCalendar, faMessage, faRightFromBracket, faBell, faGear, faPen } from '@fortawesome/free-solid-svg-icons';
 
 function DefaultMenu() {
 
@@ -53,9 +53,7 @@ function DefaultMenu() {
           <div className='space-button'>
               <h2>My profile</h2>
               <button>
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 40 40" fill="none">
-                  <path d="M30 0L25 5L35 15L40 10L30 0ZM20 10L0 30V40H10L30 20L20 10Z" fill="white"/>
-                </svg>
+                <FontAwesomeIcon icon={faPen} />
               </button>
           </div>
           <div className='account-content'>
