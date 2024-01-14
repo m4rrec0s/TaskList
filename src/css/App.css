@@ -53,6 +53,7 @@ div.icones button, a {
   padding: 10px;
   border-radius: 10px;
   transition: background-color 0.5s ease-in-out;
+  color: #fff;
 }
 
 div.icones button:hover, a:hover {
@@ -70,6 +71,8 @@ div.exit button {
   padding: 10px;
   border-radius: 10px;
   transition: background-color 0.5s ease-in-out;
+  color: #fff;
+  font-size: 16px;
 }
 
 div.exit button:hover {
@@ -115,6 +118,7 @@ div.superior > .buttons-superior button {
   margin-left: 10px;
   border-radius: 10px;
   transition: background-color 0.5s ease-in-out;
+  color: #4163D1;
 }
 
 div.superior > .buttons-superior button:hover {
@@ -231,25 +235,33 @@ div.top-recents-tasks > h2 {
   text-transform: uppercase;
 }
 
-div.top-recents-tasks > button {
+.rotate-up {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+div.top-recents-tasks > select {
   display: flex;
   background-color: var(--hover-color);
   border: none;
+  border-radius: 10px;
   padding: 10px;
   align-content: stretch;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
+  color: #fff; /* Cor do texto */
+  font-weight: 700; /* Peso da fonte */
+  margin-right: 10px;
+  outline: none;
 }
 
-div.top-recents-tasks > button > p {
-  color: #fff;
-  font-weight: 700;
-  margin-right: 10px;
+div.top-recents-tasks > select:hover {
+  background-color: var(--hover-color);
 }
 
 button.add-new-task {
-  display: block;
+  display: flex;
   padding: 20px;
   background-color: var(--primary);
   border-radius: 20px;
@@ -258,6 +270,13 @@ button.add-new-task {
   font-size: 18px;
   color: #fff;
   transition: background-color 0.3s ease-in-out;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+button.add-new-task p {
+  margin-left: 20px;
 }
 
 button.add-new-task:hover {
