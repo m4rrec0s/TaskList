@@ -1,11 +1,12 @@
 :root {
-    --back: #1E1C29;
-    --primary: #4163D1;
-    --menu-color: #252537;
+    --back: #212126;
+    --primary: #D9304F;
+    --menu-color: #2B2C31;
     --menu-color-hover: #4e4e69;
-    --hover-color: #6B83E5;
+    --hover-color: #7a0021;
     --hover-color-dois: #344381;
     --font: #fff;
+    --teste: rgb(48, 217, 78);
 }
 
 main#content {
@@ -21,7 +22,7 @@ main#content > div.presentation {
     width: 800px;
     height: 180px;
     display: flex;
-    background: var(--primary) url('../image/background-image.png') center no-repeat;
+    background: var(--primary) url('../image/background-image-new.png') center no-repeat;
     background-size: 102%;
     border-radius: 15px;
     box-shadow: 0px 0px 4px #00000031;
@@ -42,7 +43,7 @@ main#content > div.presentation > div.greeting h1, p {
 }
 
 main#content > div.presentation:hover {
-    box-shadow: 0px 0px 15px #028dff5b;
+    box-shadow: 0px 0px 15px #d9304fa8;
 }
 
 div.presentation > button.day {
@@ -53,7 +54,7 @@ div.presentation > button.day {
     align-items: center;
     justify-content: space-between;
     border-radius: 10px;
-    background-color: var(--hover-color);
+    background-color: var(--primary);
     width: 150px;
     padding: 8px;
     color: var(--font);
@@ -66,7 +67,7 @@ div.presentation > button.day p {
 }
 
 div.presentation > button.day:hover {
-    background-color: var(--hover-color-dois);
+    background-color: var(--menu-color);
     cursor: pointer;
 }
 
@@ -77,24 +78,62 @@ div.container-graphics {
 
 div.graphic {
     width: 250.3px;
-    height: 140px;
+    height: 120px;
     margin-top: 20px;
     border-radius: 10px;
     background-color: var(--menu-color);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start;
     box-shadow: 0px 0px 4px #00000031;
     transition: box-shadow 0.3s ease-in-out;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 div.graphic:hover {
     box-shadow: 0px 0px 15px #00000067;
 }
 
-div.graphic h3 {
+div.graphic h3, ul {
     color: var(--font);
-    font-size: 30px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+div.graphic ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+div.graphic ul > li {
+    font-weight: normal;
+    font-size: 12px;
+    position: relative;
+    width: 120px;
+    padding-left: 20px; /* Espaçamento para acomodar o quadradinho */
+}
+
+div.graphic ul > li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px; /* Largura do quadradinho */
+    height: 10px; /* Altura do quadradinho */
+    border-radius: 2px; /* Borda arredondada */
+}
+
+div.graphic ul > li:nth-child(1)::before {
+    background-color: #BC4E68; /* Cor para o primeiro <li> */
+}
+
+div.graphic ul > li:nth-child(2)::before {
+    background-color: #ff9cae; /* Cor para o segundo <li> */
 }
 
 div.container-statistics {
@@ -104,7 +143,7 @@ div.container-statistics {
 
 div.statistic {
     width: 385px;
-    height: 130px;
+    height: 160px;
     margin-top: 20px;
     border-radius: 10px;
     background-color: var(--menu-color);

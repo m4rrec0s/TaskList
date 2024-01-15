@@ -5,12 +5,12 @@
 }
 
 :root {
-  --back: #1E1C29;
-  --primary: #4163D1;
-  --menu-color: #252537;
-  --profile-color: #222538;
+  --back: #212126;
+  --primary: #D9304F;
+  --menu-color: #2B2C31;
+  --profile-color: #2B2C31;
   --menu-color-hover: #4e4e69;
-  --hover-color: #6B83E5;
+  --hover-color: #D9305D;
 }
 
 div.App {
@@ -28,7 +28,7 @@ div.barraLateral {
   width: 100px;
   height: 95vh;
   border-radius: 20px;
-  background: var(--primary);
+  background: linear-gradient(45deg, var(--hover-color), var(--primary) 33%);
   justify-content: space-between;
 }
 
@@ -81,10 +81,11 @@ div.exit button:hover {
 }
 
 div.content-center {
-  display: grid;
-  align-content: stretch;
-  align-items: baseline;
+  display: flex;
+  align-content: center;
   justify-items: start;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 div.superior{
@@ -118,7 +119,7 @@ div.superior > .buttons-superior button {
   margin-left: 10px;
   border-radius: 10px;
   transition: background-color 0.5s ease-in-out;
-  color: #4163D1;
+  color: var(--primary);
 }
 
 div.superior > .buttons-superior button:hover {
@@ -128,7 +129,7 @@ div.superior > .buttons-superior button:hover {
 div.profile-content {
   display: grid;
   align-content: stretch;
-  align-items: baseline;
+  align-items: stretch;
   justify-items: stretch;
   margin: 20px 20px 0px 20px;
 }
