@@ -5,7 +5,6 @@ import React from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
-
 const Home = () => {
   return (
     <main id='content'>
@@ -44,10 +43,44 @@ const Home = () => {
           </ul>
         </div>
         <div className='graphic'>
-          <h3>graphic 2</h3>
+          <div>
+            <h3>Tasks completed</h3>
+          </div>
+          <div style={{ width: '80px'}}>
+            <CircularProgressbar
+              value={30}
+              text={`${30}%`}
+              styles={buildStyles({
+                textColor: '#fff',
+                pathColor: `rgb(48, 217, 78, ${100 / 100})`,
+                trailColor: '#994857',
+              })}
+            />
+          </div>
+          <ul>
+            <li>6 Tasks completed</li>
+            <li>24 tasks not completed</li>
+          </ul>
         </div>
         <div className='graphic'>
-          <h3>graphic 3</h3>
+          <div>
+            <h3>Tasks completed</h3>
+          </div>
+          <div style={{ width: '80px'}}>
+            <CircularProgressbar
+              value={30}
+              text={`${30}%`}
+              styles={buildStyles({
+                textColor: '#fff',
+                pathColor: `rgb(48, 217, 78, ${100 / 100})`,
+                trailColor: '#994857',
+              })}
+            />
+          </div>
+          <ul>
+            <li>6 Tasks completed</li>
+            <li>24 tasks not completed</li>
+          </ul>
         </div>
       </div>
       <div className='container-statistics'>
