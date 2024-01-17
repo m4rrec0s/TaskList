@@ -16,19 +16,16 @@
 div.App {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 div.barraLateral {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
-  margin-left: 20px;
-  width: 100px;
-  height: 95vh;
-  border-radius: 20px;
-  background: linear-gradient(45deg, var(--hover-color), var(--primary) 33%);
+  width: 200px;
+  height: 100vh;
+  background: linear-gradient(65deg, var(--menu-color), var(--menu-color-hover) 80%);
   justify-content: space-between;
 }
 
@@ -85,7 +82,7 @@ div.content-center {
   align-content: center;
   justify-items: start;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 div.superior{
@@ -126,16 +123,19 @@ div.superior > .buttons-superior button:hover {
   background-color: var(--hover-color);
 }
 
+/* lado direito */
+
 div.profile-content {
   display: grid;
   align-content: stretch;
   align-items: stretch;
   justify-items: stretch;
-  margin: 20px 20px 0px 20px;
+  margin: 20px 0px 0px 20px;
+  width: 35%;
 }
 
 div.profile-content > div.account {
-    width: 350px;
+    width: 100%;
     height: 230px;
     background-color: var(--profile-color);
     border-radius: 20px;
@@ -211,7 +211,7 @@ div.account-content > div.login-content p {
 }
 
 div.profile-content > div.recent-tasks {
-  width: 350px;
+  width: 100%;
   height: 240px;
   background-color: var(--profile-color);
   border-radius: 20px;
@@ -283,4 +283,24 @@ button.add-new-task p {
 
 button.add-new-task:hover {
   background-color: var(--hover-color);
+}
+
+/*  */
+
+@media only screen and (min-width: 400px) and (max-width: 599px) {
+
+}
+
+/* Estilos para telas pequenas (ex: smartphones) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Estilos para telas médias (ex: tablets) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+}
+
+/* Estilos para telas grandes (ex: desktops e TVs) */
+@media only screen and (min-width: 1025px) {
+
 }
