@@ -1,10 +1,33 @@
 import '../css/App.css'
 import { Outlet } from 'react-router-dom';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faHome, faChartSimple, faListCheck, faCalendar, faMessage, faRightFromBracket, faBell, faGear, faPen } from '@fortawesome/free-solid-svg-icons';
 
 function DefaultMenu() {
+
+  const userName = 'Hannah';
+
+  const [selectedMonth, setSelectedMonth] = useState('january');
+
+  const updateCalendar = (event) => {
+    setSelectedMonth(event.target.value);
+  };
+
+  const showExercises = (day) => {
+    console.log(`Exercícios para o dia ${day}`);
+  };
+
+  const generateCalendarHTML = () => {
+    const days = Array.from({ length: 31 }, (_, index) => index + 1);
+
+    return days.map((day) => (
+      <div key={day} className='calendar-day' onClick={() => showExercises(day)}>
+        {day}
+      </div>
+    ));
+  };
 
   return (
     <div className="App">
@@ -60,7 +83,7 @@ function DefaultMenu() {
           <div className='account-content'>
             <div className='img-container'></div>
             <div className='login-content'>
-              <h3>Hannah</h3>
+              <h3>{userName}</h3>
               <p>hannah_martinez@gmail.com</p>
             </div>
           </div>
@@ -69,7 +92,7 @@ function DefaultMenu() {
         <div className='recent-tasks'>
           <div className='top-recents-tasks'>
             <h2>Recents Tasks</h2>
-            <select id="monthSelector">
+            <select id="monthSelector" value={selectedMonth} onChange={updateCalendar}>
               <option value="january">January</option>
               <option value="february">February</option>
               <option value="march">March</option>
@@ -82,6 +105,11 @@ function DefaultMenu() {
               <option value="november">November</option>
               <option value="december">December</option>
             </select>
+          </div>
+          <div className='calendar-container'>
+            <div id="miniCalendar" class="mini-calendar">
+              {generateCalendarHTML()}
+            </div>
           </div>
         </div>
         <button className='add-new-task'>

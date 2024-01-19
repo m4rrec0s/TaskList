@@ -15,6 +15,7 @@ export default function Tasks() {
                         <option value="february">February</option>
                         <option value="march">March</option>
                         <option value="april">April</option>
+                        <option value="may">May</option>
                         <option value="june">June</option>
                         <option value="july">July</option>
                         <option value="august">August</option>
@@ -44,7 +45,7 @@ export default function Tasks() {
             </div>
             <div className='container-tasks'>
                 
-                <div className='task'>
+                <button className='task'>
                     <div className='content-text'>
                         <h3>Breastplate</h3>
                         <p>Chest training focused on hypertrophy.</p>
@@ -54,9 +55,9 @@ export default function Tasks() {
                         <p>2024</p>
                         <p>breastplate</p>
                     </div>
-                </div>
+                </button>
 
-                <div className='task'>
+                <button className='task'>
                     <div className='content-text'>
                         <h3 label='Costas'>Back</h3>
                         <p>Chest training focused on back.</p>
@@ -66,7 +67,103 @@ export default function Tasks() {
                         <p>2024</p>
                         <p>back</p>
                     </div>
-                </div>
+                </button>
+
+                <button className='task'>
+                    <div className='content-text'>
+                        <h3 label='Costas'>Bíceps</h3>
+                        <p>Chest training focused on Bíceps.</p>
+                    </div>
+                    <div className='tags' id='tags'>
+                        <p>June</p>
+                        <p>2024</p>
+                        <p>back</p>
+                    </div>
+                </button>
+
+                <button className='task'>
+                    <div className='content-text'>
+                        <h3 label='Costas'>Posterior Thigh</h3>
+                        <p>Chest training focused on posterior thigh.</p>
+                    </div>
+                    <div className='tags' id='tags'>
+                        <p>May</p>
+                        <p>2024</p>
+                        <p>back</p>
+                    </div>
+                </button>
+
+                <button className='task'>
+                    <div className='content-text'>
+                        <h3 label='Costas'>Bíceps</h3>
+                        <p>Chest training focused on Bíceps.</p>
+                    </div>
+                    <div className='tags' id='tags'>
+                        <p>June</p>
+                        <p>2024</p>
+                        <p>back</p>
+                    </div>
+                </button>
+
+                <button className='task'>
+                    <div className='content-text'>
+                        <h3 label='Costas'>Trapeze</h3>
+                        <p>Chest training focused on trapeze.</p>
+                    </div>
+                    <div className='tags' id='tags'>
+                        <p>March</p>
+                        <p>2024</p>
+                        <p>back</p>
+                    </div>
+                </button>
+
+                <button className='task'>
+                    <div className='content-text'>
+                        <h3 label='Costas'>Back</h3>
+                        <p>Chest training focused on back.</p>
+                    </div>
+                    <div className='tags' id='tags'>
+                        <p>January</p>
+                        <p>2024</p>
+                        <p>back</p>
+                    </div>
+                </button>
+
+                <button className='task'>
+                    <div className='content-text'>
+                        <h3 label='Costas'>Back</h3>
+                        <p>Chest training focused on back.</p>
+                    </div>
+                    <div className='tags' id='tags'>
+                        <p>January</p>
+                        <p>2024</p>
+                        <p>back</p>
+                    </div>
+                </button>
+
+                <button className='task'>
+                    <div className='content-text'>
+                        <h3 label='Costas'>Back</h3>
+                        <p>Chest training focused on back.</p>
+                    </div>
+                    <div className='tags' id='tags'>
+                        <p>January</p>
+                        <p>2024</p>
+                        <p>back</p>
+                    </div>
+                </button>
+
+                <button className='task'>
+                    <div className='content-text'>
+                        <h3 label='Costas'>Back</h3>
+                        <p>Chest training focused on back.</p>
+                    </div>
+                    <div className='tags' id='tags'>
+                        <p>January</p>
+                        <p>2024</p>
+                        <p>back</p>
+                    </div>
+                </button>
             
             </div>
         </main>

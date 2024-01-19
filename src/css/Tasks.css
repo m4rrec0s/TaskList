@@ -10,7 +10,7 @@
 main#content {
     display: flex;
     flex-direction: column;
-    width: 800px;
+    max-width: 800px;
     height: 85vh;
     margin-top: 20px;
     margin-left: 20px;
@@ -64,21 +64,47 @@ div.container-tasks {
     color: #fff;
     display: grid;
     gap: 20px;
+    max-height: 100vh;
+    overflow-y: auto;
+    justify-items: center;
 }
 
-div.container-tasks > div.task {
+div.container-tasks::-webkit-scrollbar {
+    width: 8px;
+}
+
+div.container-tasks::-webkit-scrollbar-thumb {
+    background-color: var(--menu-color-hover); 
+    border-radius: 6px; 
+}
+
+div.container-tasks::-webkit-scrollbar-track {
     background-color: var(--menu-color);
+}
+
+div.container-tasks {
+    scrollbar-width: thin;
+    scrollbar-color: var(--menu-color-hover) var(--menu-color);
+}
+
+div.container-tasks > button.task {
+    background-color: var(--menu-color);
+    color: #fff;
     padding: 10px;
     display: flex;
+    width: 95%;
     justify-content: space-between;
     flex-direction: column;
     position: relative;
     cursor: pointer;
+    border: none;
+    outline: none;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.356);
     transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1) 0s;
+    transform-origin: top;
 }
 
-div.container-tasks > div.task:hover {
+div.container-tasks > button.task:hover {
     transform: scale(1.04);
     border-radius: 10px;
     box-shadow: 0px 25px 10px rgba(0, 0, 0, 0.356);
@@ -86,12 +112,17 @@ div.container-tasks > div.task:hover {
     z-index: 999;
 }
 
-div.task > div.content-text h3{
+div.container-tasks > button.task:active {
+    background-color: #787892;
+}
+
+button.task > div.content-text h3 {
+    text-align: left;
     font-size: 18px;
     margin-bottom: 8px;
 }
 
-div.task > div.tags {
+button.task > div.tags {
     margin-top: 30px;
     display: flex;
     gap: 10px;

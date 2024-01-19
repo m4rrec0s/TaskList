@@ -12,14 +12,14 @@
 main#content {
     display: flex;
     flex-direction: column;
-    width: 800px;
+    height: 85vh;
     margin-top: 20px;
     margin-left: 20px;
 }
 
 main#content > div.presentation {
     position: relative; /* Adicionado position: relative; */
-    width: 800px;
+    max-width: 800px;
     height: 180px;
     display: flex;
     background: var(--primary) url('../image/background-image-new.png') center no-repeat;

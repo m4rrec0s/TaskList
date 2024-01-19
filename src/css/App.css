@@ -239,11 +239,6 @@ div.top-recents-tasks > h2 {
   text-transform: uppercase;
 }
 
-.rotate-up {
-  transform: rotate(180deg);
-  transition: transform 0.3s ease;
-}
-
 div.top-recents-tasks > select {
   display: flex;
   background-color: var(--hover-color);
@@ -265,12 +260,72 @@ div.top-recents-tasks > select:hover {
   background-color: var(--menu-color);
 }
 
+div.recent-tasks > div.calendar-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 350px;
+  height: 100px;
+}
+
+div.mini-calendar::-webkit-scrollbar {
+  margin-top: 5px;
+  height: 8px;
+}
+
+div.mini-calendar::-webkit-scrollbar-thumb {
+  background-color: var(--menu-color-hover); 
+  border-radius: 8px; 
+}
+
+div.mini-calendar::-webkit-scrollbar-track {
+  background-color: var(--back);
+}
+
+div.mini-calendar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--menu-color-hover) var(--back);
+}
+
+div.calendar-container > div.mini-calendar {
+  display: flex;
+  font-size: 50px;
+  overflow-x: auto;
+  gap: 5px;
+  padding-bottom: 10px;
+}
+
+div.mini-calendar > div.calendar-day {
+  cursor: pointer;
+  background-color: var(--menu-color-hover);
+  color: #fff;
+  padding: 0 10px 0 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+div.mini-calendar > div.calendar-day:hover {
+  background-color: var(--hover-color);
+  color: #fff; /* Altere a cor do texto ao passar o mouse */
+}
+
+div.mini-calendar > div.calendar-day:focus {
+  outline: none;
+  background-color: var(--hover-color);
+  color: #fff; /* Altere a cor do texto quando em foco */
+  /* Adicione outros estilos de foco conforme necessário */
+}
+
+
 button.add-new-task {
   display: flex;
   padding: 20px;
   background-color: var(--primary);
   border-radius: 20px;
   border: none;
+  max-height: 10vh;
   box-shadow: 0px 0px 4px #00000031;
   font-size: 18px;
   color: #fff;
