@@ -1,0 +1,100 @@
+:root {
+    --back: #212126;
+    --primary: #D9304F;
+    --menu-color: #2B2C31;
+    --profile-color: #2B2C31;
+    --menu-color-hover: #4e4e69;
+    --hover-color: #9e002a;
+}
+
+main#content {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 85vh;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+div.filter {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: space-between;
+    background-color: var(--menu-color);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+div.filter h3 {
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+div.filter > div.selector {
+    background-color: var(--profile-color);
+}
+
+div.selector > label {
+    color: #888888;
+    margin-right: 5px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+div.selector > select {
+    background-color: var(--menu-color-hover);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 11px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+div.container-tasks {
+    margin-top: 20px;
+    color: #fff;
+    display: grid;
+    gap: 20px;
+}
+
+div.container-tasks > div.task {
+    background-color: var(--menu-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.356);
+    transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1) 0s;
+}
+
+div.container-tasks > div.task:hover {
+    transform: scale(1.04);
+    border-radius: 10px;
+    box-shadow: 0px 25px 10px rgba(0, 0, 0, 0.356);
+    background-color: var(--menu-color-hover);
+    z-index: 999;
+}
+
+div.task > div.content-text h3{
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+div.task > div.tags {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px;
+    color: #888888;
+    font-size: 13px;
+}

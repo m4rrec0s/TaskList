@@ -10,13 +10,15 @@
   --menu-color: #2B2C31;
   --profile-color: #2B2C31;
   --menu-color-hover: #4e4e69;
-  --hover-color: #D9305D;
+  --hover-color: #9e002a;
 }
 
 div.App {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100vw;
 }
 
 div.barraLateral {
@@ -256,10 +258,11 @@ div.top-recents-tasks > select {
   font-weight: 700; /* Peso da fonte */
   margin-right: 10px;
   outline: none;
+  transition: background-color 0.3s ease-in-out;
 }
 
 div.top-recents-tasks > select:hover {
-  background-color: var(--hover-color);
+  background-color: var(--menu-color);
 }
 
 button.add-new-task {

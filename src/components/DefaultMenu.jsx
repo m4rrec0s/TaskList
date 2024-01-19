@@ -15,11 +15,11 @@ function DefaultMenu() {
           <Link to="/">
             <FontAwesomeIcon icon={faHome} />
           </Link>
-          <Link to="/graphics">
-            <FontAwesomeIcon icon={faChartSimple} />
-          </Link>
           <Link to="/tasks">
             <FontAwesomeIcon icon={faListCheck} />
+          </Link>
+          <Link to="/graphics">
+            <FontAwesomeIcon icon={faChartSimple} />
           </Link>
           <Link to="/calendar">
             <FontAwesomeIcon icon={faCalendar} />

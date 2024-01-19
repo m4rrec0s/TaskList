@@ -17,4 +17,6 @@ body {
 
 div#root {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

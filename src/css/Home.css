@@ -55,7 +55,6 @@ div.presentation > button.day {
     justify-content: space-between;
     border-radius: 10px;
     background-color: var(--primary);
-    width: 150px;
     padding: 8px;
     color: var(--font);
     border: none;
@@ -64,6 +63,7 @@ div.presentation > button.day {
 
 div.presentation > button.day p {
     font-size: 12px;
+    margin: 0 5px;
 }
 
 div.presentation > button.day:hover {
