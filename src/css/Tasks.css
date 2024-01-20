@@ -1,11 +1,4 @@
-:root {
-    --back: #212126;
-    --primary: #D9304F;
-    --menu-color: #2B2C31;
-    --profile-color: #2B2C31;
-    --menu-color-hover: #4e4e69;
-    --hover-color: #9e002a;
-}
+@import url(./Themes.css);
 
 main#content {
     display: flex;
@@ -18,14 +11,14 @@ main#content {
 
 h1 {
     font-size: 30px;
-    color: #fff;
+    color: var(--fonts);
     margin-bottom: 10px;
 }
 
 div.filter {
     display: flex;
     align-items: center;
-    color: #fff;
+    color: var(--fonts);
     justify-content: space-between;
     background-color: var(--menu-color);
     padding: 10px;
@@ -38,7 +31,7 @@ div.filter h3 {
 }
 
 div.filter > div.selector {
-    background-color: var(--profile-color);
+    background-color: transparent;;
 }
 
 div.selector > label {
@@ -51,7 +44,7 @@ div.selector > label {
 
 div.selector > select {
     background-color: var(--menu-color-hover);
-    color: #fff;
+    color: var(--fonts);
     border: none;
     outline: none;
     font-size: 11px;
@@ -61,7 +54,7 @@ div.selector > select {
 
 div.container-tasks {
     margin-top: 20px;
-    color: #fff;
+    color: var(--fonts);
     display: grid;
     gap: 20px;
     max-height: 100vh;
@@ -82,14 +75,8 @@ div.container-tasks::-webkit-scrollbar-track {
     background-color: var(--menu-color);
 }
 
-div.container-tasks {
-    scrollbar-width: thin;
-    scrollbar-color: var(--menu-color-hover) var(--menu-color);
-}
-
 div.container-tasks > button.task {
     background-color: var(--menu-color);
-    color: #fff;
     padding: 10px;
     display: flex;
     width: 95%;
@@ -117,15 +104,25 @@ div.container-tasks > button.task:active {
 }
 
 button.task > div.content-text h3 {
+    color: var(--fonts);
     text-align: left;
     font-size: 18px;
     margin-bottom: 8px;
+}
+
+button.task > div.content-text p {
+    color: var(--fonts);
+    opacity: 0.7;
 }
 
 button.task > div.tags {
     margin-top: 30px;
     display: flex;
     gap: 10px;
-    color: #888888;
+}
+
+button.task > div.tags p {
+    color: var(--fonts);
     font-size: 13px;
+    opacity: 0.5;
 }

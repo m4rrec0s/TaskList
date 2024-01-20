@@ -1,0 +1,22 @@
+@import url(./Themes.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main#content {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    height: 85vh;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 10px;
+}

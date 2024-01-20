@@ -1,12 +1,19 @@
 import '../css/App.css'
 import { Outlet } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faHome, faChartSimple, faListCheck, faCalendar, faMessage, faRightFromBracket, faBell, faGear, faPen } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faHome, faChartSimple, faListCheck, faCalendar, faMessage, faRightFromBracket, faBell, faGear, faPen, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 function DefaultMenu() {
+  // Light Mode 
+  const [isDarkMode, setDarkMode] = useState(true);
 
+  const toggleTheme = () => {
+    setDarkMode((prevMode) => !prevMode);
+  };
+
+  // pegar data e nome
   const userName = 'Hannah';
 
   const [selectedMonth, setSelectedMonth] = useState('january');
@@ -30,7 +37,7 @@ function DefaultMenu() {
   };
 
   return (
-    <div className="App">
+    <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <div className="barraLateral">
         <h3>Task<strong>List</strong></h3>
@@ -61,6 +68,13 @@ function DefaultMenu() {
         <div className="superior">
           <input type="search" id="search" placeholder="search for task's, events, etc."></input>
           <div className="buttons-superior">
+            <button onClick={toggleTheme}>
+              {isDarkMode ? (
+                <FontAwesomeIcon icon={faMoon} />
+              ) : (
+                <FontAwesomeIcon icon={faSun} />
+              )}
+            </button>
             <button>
               <FontAwesomeIcon icon={faBell} />
             </button>

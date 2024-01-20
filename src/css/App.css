@@ -1,16 +1,9 @@
+@import url(./Themes.css);
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-:root {
-  --back: #212126;
-  --primary: #D9304F;
-  --menu-color: #2B2C31;
-  --profile-color: #2B2C31;
-  --menu-color-hover: #4e4e69;
-  --hover-color: #9e002a;
 }
 
 div.App {
@@ -19,6 +12,8 @@ div.App {
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100vw;
+  background-color: var(--back);
+  transition: all 0.5s ease-in-out;
 }
 
 div.barraLateral {
@@ -29,11 +24,12 @@ div.barraLateral {
   height: 100vh;
   background: linear-gradient(65deg, var(--menu-color), var(--menu-color-hover) 80%);
   justify-content: space-between;
+  transition: all 0.5s ease-in-out;
 }
 
 div.barraLateral h3 {
   margin-top: 10px;
-  color: #fff;
+  color: var(--fonts);
   font-weight: 400;
   font-size: 15px;
   padding: 10px;
@@ -52,7 +48,7 @@ div.icones button, a {
   padding: 10px;
   border-radius: 10px;
   transition: background-color 0.5s ease-in-out;
-  color: #fff;
+  color: var(--fonts);
 }
 
 div.icones button:hover, a:hover {
@@ -70,7 +66,7 @@ div.exit button {
   padding: 10px;
   border-radius: 10px;
   transition: background-color 0.5s ease-in-out;
-  color: #fff;
+  color: var(--fonts);
   font-size: 16px;
 }
 
@@ -85,6 +81,7 @@ div.content-center {
   justify-items: start;
   flex-direction: column;
   justify-content: flex-start;
+  transition: all 0.5s ease-in-out;
 }
 
 div.superior{
@@ -103,7 +100,7 @@ div.superior input {
   border: none;
   outline: none;
   border-radius: 10px;
-  color: #fff;
+  color: var(--fonts);
   transition: box-shadow 0.3s ease-in-out;
 }
 
@@ -115,6 +112,7 @@ div.superior > .buttons-superior button {
   padding: 15px;
   background-color: var(--menu-color);
   border: none;
+  outline: none;
   margin-left: 10px;
   border-radius: 10px;
   transition: background-color 0.5s ease-in-out;
@@ -159,7 +157,7 @@ div.account > div.space-button h2 {
   margin-left: 10px;
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
+  color: var(--fonts);
   text-transform: uppercase;
 }
 
@@ -169,7 +167,7 @@ div.space-button > button {
   padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s ease-in-out;
-  color: #fff;
+  color: var(--fonts);
 }
 
 div.space-button > button:hover {
@@ -201,13 +199,13 @@ div.account-content > div.login-content {
 }
 
 div.account-content > div.login-content h3 {
-  color: #fff;
+  color: var(--fonts);
   font-weight: bolder;
   font-size: 18px;
 }
 
 div.account-content > div.login-content p {
-  color: #ffffffa8;
+  color: var(--fonts);
   font-size: 14px;
   font-weight: normal;
 }
@@ -235,7 +233,7 @@ div.top-recents-tasks > h2 {
   margin-left: 10px;
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
+  color: var(--fonts);
   text-transform: uppercase;
 }
 
@@ -249,7 +247,7 @@ div.top-recents-tasks > select {
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  color: #fff; /* Cor do texto */
+  color: var(--fonts); /* Cor do texto */
   font-weight: 700; /* Peso da fonte */
   margin-right: 10px;
   outline: none;
@@ -284,11 +282,6 @@ div.mini-calendar::-webkit-scrollbar-track {
   background-color: var(--back);
 }
 
-div.mini-calendar {
-  scrollbar-width: thin;
-  scrollbar-color: var(--menu-color-hover) var(--back);
-}
-
 div.calendar-container > div.mini-calendar {
   display: flex;
   font-size: 50px;
@@ -300,7 +293,7 @@ div.calendar-container > div.mini-calendar {
 div.mini-calendar > div.calendar-day {
   cursor: pointer;
   background-color: var(--menu-color-hover);
-  color: #fff;
+  color: var(--fonts);
   padding: 0 10px 0 10px;
   border-radius: 4px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -308,13 +301,13 @@ div.mini-calendar > div.calendar-day {
 
 div.mini-calendar > div.calendar-day:hover {
   background-color: var(--hover-color);
-  color: #fff; /* Altere a cor do texto ao passar o mouse */
+  color: var(--fonts); /* Altere a cor do texto ao passar o mouse */
 }
 
 div.mini-calendar > div.calendar-day:focus {
   outline: none;
   background-color: var(--hover-color);
-  color: #fff; /* Altere a cor do texto quando em foco */
+  color: var(--fonts); /* Altere a cor do texto quando em foco */
   /* Adicione outros estilos de foco conforme necessário */
 }
 
@@ -328,7 +321,7 @@ button.add-new-task {
   max-height: 10vh;
   box-shadow: 0px 0px 4px #00000031;
   font-size: 18px;
-  color: #fff;
+  color: var(--fonts);
   transition: background-color 0.3s ease-in-out;
   justify-content: center;
   align-content: center;

@@ -1,13 +1,4 @@
-:root {
-    --back: #212126;
-    --primary: #D9304F;
-    --menu-color: #2B2C31;
-    --menu-color-hover: #4e4e69;
-    --hover-color: #7a0021;
-    --hover-color-dois: #344381;
-    --font: #fff;
-    --teste: rgb(48, 217, 78);
-}
+@import url(./Themes.css);
 
 main#content {
     display: flex;
@@ -15,9 +6,11 @@ main#content {
     height: 85vh;
     margin-top: 20px;
     margin-left: 20px;
+    transition: all 0.5s ease-in-out;
 }
 
 main#content > div.presentation {
+    color: #fff;
     position: relative; /* Adicionado position: relative; */
     max-width: 800px;
     height: 180px;
@@ -39,6 +32,7 @@ main#content > div.presentation > div.greeting {
 }
 
 main#content > div.presentation > div.greeting h1, p {
+    color: #fff;
     text-shadow: 0px 0px 2px var(--menu-color) ;
 }
 
@@ -56,7 +50,7 @@ div.presentation > button.day {
     border-radius: 10px;
     background-color: var(--primary);
     padding: 8px;
-    color: var(--font);
+    color: #fff;
     border: none;
     transition: background-color 0.3s ease-in-out;
 }
@@ -98,7 +92,7 @@ div.graphic:hover {
 }
 
 div.graphic h3, ul {
-    color: var(--font);
+    color: var(--fonts);
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
@@ -159,6 +153,6 @@ div.statistic:hover {
 }
 
 div.statistic h3 {
-    color: var(--font);
+    color: var(--fonts);
     font-size: 30px;
 }

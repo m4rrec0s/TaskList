@@ -1,0 +1,30 @@
+@keyframes themeTransition {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+:root {
+    --back: #212126;
+    --primary: #D9304F;
+    --menu-color: #2B2C31;
+    --profile-color: #2B2C31;
+    --menu-color-hover: #4e4e69;
+    --hover-color: #9e002a;
+    --fonts: #ffffff;
+}
+  
+.light-mode {
+    --back: #bfbfbf;
+    --primary: #ff6b80;
+    --menu-color: #979797;
+    --profile-color: #ffffff;
+    --menu-color-hover: #cfcfcf;
+    --hover-color: #ff003f;
+    --fonts: #1a1a1a;
+}
