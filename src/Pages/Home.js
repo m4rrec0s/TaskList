@@ -8,19 +8,16 @@ import 'react-circular-progressbar/dist/styles.css';
 const Home = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
-  // Atualizar a data e a hora a cada segundo
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentDateTime(new Date());
     }, 1000);
 
-    // Limpar o intervalo quando o componente for desmontado
     return () => clearInterval(intervalId);
-  }, []); // Executará o useEffect apenas uma vez no momento da montagem
+  }, []);
 
   const currentHour = currentDateTime.getHours();
 
-  // Lógica para determinar a mensagem de saudação com base na hora
   let greetingMessage = '';
   if (currentHour < 12) {
     greetingMessage = 'Good Morning';
@@ -30,19 +27,15 @@ const Home = () => {
     greetingMessage = 'Good Evening';
   }
 
-  // Obter o nome do usuário (pode ser obtido de um estado ou propriedade)
   const userName = 'Hannah';
 
-  // Lógica para determinar o dia da semana
   const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const dayOfWeek = daysOfWeek[currentDateTime.getDay()];
 
-  // Função para formatar o número com zero à esquerda se for menor que 10
   const formatNumber = (number) => (number < 10 ? `0${number}` : number);
 
-  // Obter informações da data atual
   const day = formatNumber(currentDateTime.getDate());
-  const month = formatNumber(currentDateTime.getMonth() + 1); // Meses são indexados a partir de 0
+  const month = formatNumber(currentDateTime.getMonth() + 1);
   const year = currentDateTime.getFullYear();
   const hours = formatNumber(currentDateTime.getHours());
   const minutes = formatNumber(currentDateTime.getMinutes());

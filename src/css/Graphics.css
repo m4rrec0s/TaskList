@@ -17,6 +17,70 @@ main#content {
 
 h1 {
     font-size: 30px;
-    color: #fff;
+    color: var(--fonts);
     margin-bottom: 10px;
+}
+
+div.graph-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 60% 30%;
+    gap: 10px;
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+div.graph-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+div.graph-container::-webkit-scrollbar-thumb {
+    background-color: var(--menu-color-hover); 
+    border-radius: 6px; 
+}
+
+div.graph-container::-webkit-scrollbar-track {
+    background-color: var(--menu-color);
+}
+
+div.graph-container .chart-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--menu-color);
+    border-radius: 10px;
+    height: 280px;
+}
+
+div.graph-container .chart-content h3 {
+    margin: 10px 0 0 10px ;
+    font-size: 16px;
+    color: var(--fonts);
+}
+
+div.graph-container .chart-content svg{
+    height: 200px;
+    width: 100%
+}
+
+div.graph-container .details {
+    background-color: var(--menu-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 280px;
+}
+
+div.graph-container .details h3 {
+    color: var(--fonts);
+    font-size: 80px;
+}
+
+div.graph-container .details p {
+    color: var(--fonts);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
 }

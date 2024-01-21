@@ -11,7 +11,7 @@ div.App {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  width: 100vw;
+  width: 100%;
   background-color: var(--back);
   transition: all 0.5s ease-in-out;
 }
@@ -206,8 +206,9 @@ div.account-content > div.login-content h3 {
 
 div.account-content > div.login-content p {
   color: var(--fonts);
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
+  opacity: 60%;
 }
 
 div.profile-content > div.recent-tasks {
