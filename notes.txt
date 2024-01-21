@@ -1,5 +1,0 @@
-API'S USADAS:
-
-fontwelsome => icones
-Outlet e Link => 'react-router-dom'
-React com useState => 'react'
