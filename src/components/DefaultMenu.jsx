@@ -1,9 +1,22 @@
 import '../css/App.css'
 import { Outlet } from 'react-router-dom';
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faHome, faChartSimple, faListCheck, faCalendar, faMessage, faRightFromBracket, faBell, faGear, faPen, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faPlus, 
+  faHome, 
+  faChartSimple, 
+  faListCheck, 
+  faCalendar, 
+  faMessage, 
+  faRightFromBracket, 
+  faBell, 
+  faGear, 
+  faPen, 
+  faMoon, 
+  faSun 
+} from '@fortawesome/free-solid-svg-icons';
 
 function DefaultMenu() {
   // Light Mode 
