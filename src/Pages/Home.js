@@ -5,6 +5,28 @@ import React, { useState, useEffect } from 'react';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
+import { Chart } from "react-google-charts";
+import { Link } from 'react-router-dom';
+
+export const data = [
+    ["Element", "Completede", { role: "style" }],
+    ["Monday", 4, "#D9304F"], // RGB value
+    ["Tuesday", 6, "#9e002a"], // English color name
+    ["Wednesday", 2, "#D9304F"],
+    ["Thursday", 1, "#9e002a"],
+    ["Friday", 6, "#D9304F"],
+    ["Saturday", 5, "#9e002a"],
+    ["Sunday", 7, "#D9304F"], // CSS-style declaration
+];
+
+const options = {
+    hAxis: {textStyle: { color: '#fff' } },
+    vAxis: { minValue: 0, textStyle: { color: '#fff' }, titleTextStyle: { color: '#fff'} },
+    legend: 'none',
+    colors: ['#D9304F', '#9e002a', '#D9304F', '#9e002a'],
+    backgroundColor: { fill: 'transparent' },
+  };
+
 const Home = () => {
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
@@ -43,13 +65,13 @@ const Home = () => {
   return (
     <main id='content'>
       <div className='presentation'>
-        <button className='day'>
+        <Link to="/calendar" className='day'>
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 30 30" fill="none">
             <path d="M0.042796 0V7.5H30V0H0.042796ZM0.042796 11.25V29.6625C0.042796 29.85 0.21398 30 0.42796 30H29.572C29.786 30 29.9572 29.85 29.9572 29.6625V11.25H0H0.042796ZM4.3224 15H8.602V18.75H4.3224V15ZM12.8816 15H17.1612V18.75H12.8816V15ZM21.4408 15H25.7204V18.75H21.4408V15ZM4.3224 22.5H8.602V26.25H4.3224V22.5ZM12.8816 22.5H17.1612V26.25H12.8816V22.5Z" fill="#F9F9F9" />
           </svg>
           <p>{`${month}/${day}/${year}`}</p>
           <p>{`${hours}:${minutes} ${currentDateTime.getHours() >= 12 ? 'pm' : 'am'}`}</p>
-        </button>
+        </Link>
         <div className='greeting'>
           <h1>{`${greetingMessage}, ${userName}!`}</h1>
           <p>{`Have a great ${dayOfWeek}!`}</p>
@@ -119,10 +141,16 @@ const Home = () => {
       </div>
       <div className='container-statistics'>
         <div className='statistic'>
-          <h3>statistic 1</h3>
+          <div className='chart-content'>
+            <h3>Weekly Performance</h3>
+            <Chart chartType="ColumnChart" options={options} data={data} />
+          </div>
         </div>
         <div className='statistic'>
-          <h3>statistic 2</h3>
+          <div className='chart-content'>
+            <h3>Weekly Performance</h3>
+            <Chart chartType="ColumnChart" options={options} data={data} />
+          </div>
         </div>
       </div>
     </main>

@@ -327,6 +327,7 @@ button.add-new-task {
   justify-content: center;
   align-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 button.add-new-task p {

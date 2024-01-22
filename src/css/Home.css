@@ -1,18 +1,30 @@
 @import url(./Themes.css);
 
 main#content {
-    display: flex;
-    flex-direction: column;
-    height: 85vh;
+    display: grid;
     margin-top: 20px;
     margin-left: 20px;
-    transition: all 0.5s ease-in-out;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+main#content::-webkit-scrollbar {
+    width: 8px;
+}
+
+main#content::-webkit-scrollbar-thumb {
+    background-color: var(--menu-color-hover); 
+    border-radius: 6px; 
+}
+
+main#content::-webkit-scrollbar-track {
+    background-color: var(--menu-color);
 }
 
 main#content > div.presentation {
     color: #fff;
     position: relative; /* Adicionado position: relative; */
-    max-width: 800px;
+    max-width: 750px;
     height: 180px;
     display: flex;
     background: var(--primary) url('../image/background-image-new.png') center no-repeat;
@@ -31,6 +43,10 @@ main#content > div.presentation > div.greeting {
     margin: 0 0 10px 10px;
 }
 
+main#content > div.presentation > div.greeting h1 {
+    padding-top: 300px;
+}
+
 main#content > div.presentation > div.greeting h1, p {
     color: #fff;
     text-shadow: 0px 0px 2px var(--menu-color) ;
@@ -40,10 +56,11 @@ main#content > div.presentation:hover {
     box-shadow: 0px 0px 15px #d9304fa8;
 }
 
-div.presentation > button.day {
-    position: absolute; /* Adicionado position: absolute; */
-    top: 15px; /* Ajuste a distância superior conforme necessário */
-    left: 15px; /* Ajuste a distância à esquerda conforme necessário */
+div.presentation > a.day {
+    position: absolute;
+    text-decoration: none;
+    top: 15px;
+    left: 15px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,35 +72,35 @@ div.presentation > button.day {
     transition: background-color 0.3s ease-in-out;
 }
 
-div.presentation > button.day p {
+div.presentation > a.day p {
     font-size: 12px;
     margin: 0 5px;
 }
 
-div.presentation > button.day:hover {
+div.presentation > a.day:hover {
     background-color: var(--menu-color);
     cursor: pointer;
 }
 
 div.container-graphics {
+    width: 750px;
     display: flex;
     justify-content: space-between;
 }
 
 div.graphic {
-    width: 250.3px;
-    height: 120px;
+    width: 240px;
+    height: 300px;
     margin-top: 20px;
     border-radius: 10px;
     background-color: var(--menu-color);
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: center;
     box-shadow: 0px 0px 4px #00000031;
     transition: box-shadow 0.3s ease-in-out;
     flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 10px;
 }
 
@@ -108,7 +125,8 @@ div.graphic ul > li {
     font-size: 12px;
     position: relative;
     width: 120px;
-    padding-left: 20px; /* Espaçamento para acomodar o quadradinho */
+    padding-left: 20px;
+    margin-top: 5px;
 }
 
 div.graphic ul > li::before {
@@ -117,27 +135,29 @@ div.graphic ul > li::before {
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 10px; /* Largura do quadradinho */
-    height: 10px; /* Altura do quadradinho */
-    border-radius: 2px; /* Borda arredondada */
+    width: 10px; 
+    height: 10px; 
+    border-radius: 2px;
 }
 
 div.graphic ul > li:nth-child(1)::before {
-    background-color: #BC4E68; /* Cor para o primeiro <li> */
+    background-color: #BC4E68; 
 }
 
 div.graphic ul > li:nth-child(2)::before {
-    background-color: #ff9cae; /* Cor para o segundo <li> */
+    background-color: #ff9cae; 
 }
 
 div.container-statistics {
+    width: 750px;
     display: flex;
     justify-content: space-between;
 }
 
 div.statistic {
-    width: 385px;
-    height: 160px;
+    flex-direction: column;
+    width: 365px;
+    height: 300px;
     margin-top: 20px;
     border-radius: 10px;
     background-color: var(--menu-color);
@@ -152,7 +172,13 @@ div.statistic:hover {
     box-shadow: 0px 0px 15px #00000067;
 }
 
-div.statistic h3 {
+div.statistic .chart-content {
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+
+div.statistic .chart-content h3 {
     color: var(--fonts);
-    font-size: 30px;
+    font-size: 14px;
 }
