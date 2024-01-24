@@ -1,4 +1,7 @@
 import '../css/App.css'
+import '../css/Modal.css'
+import NotificationModal from './NotificationModal';
+import SettingsModal from './SettingsModal';
 import { Outlet } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -18,12 +21,28 @@ import {
   faSun 
 } from '@fortawesome/free-solid-svg-icons';
 
-function DefaultMenu() {
+const DefaultMenu = () => {
   // Light Mode 
   const [isDarkMode, setDarkMode] = useState(true);
 
   const toggleTheme = () => {
     setDarkMode((prevMode) => !prevMode);
+  };
+
+  const [notificationModalVisible, setNotificationModalVisible] = useState(false);
+  const [settingsModalVisible, setSettingsModalVisible] = useState(false);
+
+  const openNotificationModal = () => {
+    setNotificationModalVisible(true);
+  };
+
+  const openSettingsModal = () => {
+    setSettingsModalVisible(true);
+  };
+
+  const closeModals = () => {
+    setNotificationModalVisible(false);
+    setSettingsModalVisible(false);
   };
 
   // pegar data e nome
@@ -88,12 +107,16 @@ function DefaultMenu() {
                 <FontAwesomeIcon icon={faSun} />
               )}
             </button>
-            <button>
+            <button onClick={openNotificationModal}>
               <FontAwesomeIcon icon={faBell} />
             </button>
-            <button>
+            <button onClick={openSettingsModal}>
               <FontAwesomeIcon icon={faGear} />
             </button>
+
+            {notificationModalVisible && <NotificationModal onClose={closeModals} />}
+            {settingsModalVisible && <SettingsModal onClose={closeModals} />}
+          
           </div>
         </div>
         <Outlet />

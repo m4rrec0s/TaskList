@@ -1,0 +1,55 @@
+@import url('./Themes.css');
+
+@keyframes grow {
+    from {
+        opacity: 0;
+        transform: scale(0); /* Começa com altura 0 */
+    }
+    to {
+        opacity: 1;
+        transform: scaleY(1); /* Cresce para altura completa */
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fundo desfocado */
+    backdrop-filter: blur(7px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; 
+}
+
+.higher {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.higher #close-button {
+    background-color: transparent;
+    color: var(--fonts);
+}
+
+.higher #close-button:hover {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.modal-content {
+    width: 700px;
+    height: 500px;
+    background: var(--profile-color);
+    color: var(--fonts);
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    transform-origin: right top; /* Define o ponto de origem para a animação */
+    animation: grow 0.4s ease-in-out; /* Adiciona uma animação de crescimento */
+}
