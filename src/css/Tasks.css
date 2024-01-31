@@ -1,14 +1,5 @@
 @import url(./Themes.css);
 
-main#content {
-    display: flex;
-    flex-direction: column;
-    max-width: 800px;
-    height: 85vh;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
 h1 {
     font-size: 30px;
     color: var(--fonts);

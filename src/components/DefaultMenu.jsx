@@ -54,20 +54,6 @@ const DefaultMenu = () => {
     setSelectedMonth(event.target.value);
   };
 
-  const showExercises = (day) => {
-    console.log(`Exercícios para o dia ${day}`);
-  };
-
-  const generateCalendarHTML = () => {
-    const days = Array.from({ length: 31 }, (_, index) => index + 1);
-
-    return days.map((day) => (
-      <div key={day} className='calendar-day' onClick={() => showExercises(day)}>
-        {day}
-      </div>
-    ));
-  };
-
   return (
     <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -157,9 +143,6 @@ const DefaultMenu = () => {
             </select>
           </div>
           <div className='calendar-container'>
-            <div id="miniCalendar" class="mini-calendar">
-              {generateCalendarHTML()}
-            </div>
           </div>
         </div>
         <button className='add-new-task'>

@@ -4,8 +4,11 @@ main#content {
     display: grid;
     margin-top: 20px;
     margin-left: 20px;
-    overflow-y: auto;
     padding-bottom: 20px;
+    width: 100%;
+    max-width: 95%;
+    height: 85vh;
+    overflow-y: auto;
 }
 
 main#content::-webkit-scrollbar {
@@ -23,12 +26,13 @@ main#content::-webkit-scrollbar-track {
 
 main#content > div.presentation {
     color: #fff;
-    position: relative; /* Adicionado position: relative; */
-    max-width: 750px;
+    position: relative;
+    width: 100%;
+    max-width: 95%;
     height: 180px;
     display: flex;
     background: var(--primary) url('../image/background-image-new.png') center no-repeat;
-    background-size: 102%;
+    background-size: cover;
     border-radius: 15px;
     box-shadow: 0px 0px 4px #00000031;
     transition: box-shadow 0.3s ease-in-out;
@@ -83,13 +87,14 @@ div.presentation > a.day:hover {
 }
 
 div.container-graphics {
-    width: 750px;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    max-width: 95%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 div.graphic {
-    width: 240px;
     height: 300px;
     margin-top: 20px;
     border-radius: 10px;
@@ -149,14 +154,15 @@ div.graphic ul > li:nth-child(2)::before {
 }
 
 div.container-statistics {
-    width: 750px;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+    max-width: 95%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 div.statistic {
     flex-direction: column;
-    width: 365px;
     height: 300px;
     margin-top: 20px;
     border-radius: 10px;
@@ -173,7 +179,7 @@ div.statistic:hover {
 }
 
 div.statistic .chart-content {
-    width: 100%;
+    width: 90%;
     height: 200px;
     text-align: center;
 }
