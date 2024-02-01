@@ -1,0 +1,90 @@
+/* Adicione as classes e os estilos necessários para o menu responsivo */
+
+.barraLateral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    height: 100vh;
+    background: linear-gradient(65deg, var(--menu-color), var(--menu-color-hover) 80%);
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+  }
+  
+.hamburger {
+display: none;
+flex-direction: column;
+cursor: pointer;
+padding: 10px;
+margin-top: 10px;
+}
+
+.line {
+width: 25px;
+height: 3px;
+background-color: var(--fonts);
+margin: 5px 0;
+}
+
+div.icones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+div.icones button, a {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease-in-out;
+    color: var(--fonts);
+}
+
+div.icones button:hover, a:hover {
+    cursor: pointer;
+    background: var(--hover-color);
+}
+
+div.exit {
+    margin-bottom: 20px;
+}
+
+div.exit button {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease-in-out;
+    color: var(--fonts);
+    font-size: 16px;
+}
+
+div.exit button:hover {
+    cursor: pointer;
+    background: var(--hover-color);
+}
+
+@media only screen and (max-width: 799px) {
+    .barraLateral.menuOpen {
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .icones.menuOpen {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .exit.menuOpen {
+        align-self: flex-end;
+    }
+}
+  

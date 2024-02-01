@@ -2,6 +2,7 @@ import '../css/App.css'
 import '../css/Modal.css'
 import NotificationModal from './NotificationModal';
 import SettingsModal from './SettingsModal';
+import ProfileContentModal from './ProfileContentModal';
 import { Outlet } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -31,6 +32,7 @@ const DefaultMenu = () => {
 
   const [notificationModalVisible, setNotificationModalVisible] = useState(false);
   const [settingsModalVisible, setSettingsModalVisible] = useState(false);
+  const [profileContentModalVisible, setProfileContentModalVisible] = useState(false);
 
   const openNotificationModal = () => {
     setNotificationModalVisible(true);
@@ -40,9 +42,14 @@ const DefaultMenu = () => {
     setSettingsModalVisible(true);
   };
 
+  const openProfileContentModal = () => {
+    setProfileContentModalVisible(true);
+  }
+
   const closeModals = () => {
     setNotificationModalVisible(false);
     setSettingsModalVisible(false);
+    setProfileContentModalVisible(false);
   };
 
   // pegar data e nome
@@ -56,7 +63,6 @@ const DefaultMenu = () => {
 
   return (
     <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <div className="barraLateral">
         <h3>Task<strong>List</strong></h3>
         <div className= "icones">
@@ -108,6 +114,14 @@ const DefaultMenu = () => {
         <Outlet />
       </div>
 
+      
+      <button className='profile-content-button' onClick={openProfileContentModal}>
+        <div className='content-img' />
+        <h3>{userName}</h3>
+      </button>
+
+      {profileContentModalVisible && <ProfileContentModal onClose={closeModals} />}
+
       <div className='profile-content'>
         <div className='account'>
           <div className='space-button'>
@@ -124,7 +138,7 @@ const DefaultMenu = () => {
             </div>
           </div>
         </div>
-
+        
         <div className='recent-tasks'>
           <div className='top-recents-tasks'>
             <h2>Recents Tasks</h2>

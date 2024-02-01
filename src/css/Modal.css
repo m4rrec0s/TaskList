@@ -30,15 +30,17 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .higher #close-button {
+    outline: none;
+    border: none;
     background-color: transparent;
     color: var(--fonts);
 }
 
 .higher #close-button:hover {
-    background-color: transparent;
     color: var(--primary);
 }
 
@@ -46,10 +48,64 @@
     width: 700px;
     height: 500px;
     background: var(--profile-color);
-    color: var(--fonts);
     padding: 20px;
     border-radius: 8px;
     position: relative;
-    transform-origin: right top; /* Define o ponto de origem para a animação */
-    animation: grow 0.4s ease-in-out; /* Adiciona uma animação de crescimento */
+    transform-origin: right top;
+    animation: grow 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content p {
+    color: var(--fonts);
+}
+
+div.profile-content2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+div.profile-content2 > div.account2 {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+div.account2 > div.account-content2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+div.account-content2 > div.img-container2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: var(--menu-color) url('../image/&.jpeg') center no-repeat;
+    background-size: 105%;
+}
+
+div.account-content2 > div.login-content2 {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+}
+
+div.account-content2 > div.login-content2 h3 {
+    color: var(--fonts);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+div.account-content2 > div.login-content2 p {
+    color: var(--fonts);
+    font-size: 13px;
+    font-weight: normal;
+    opacity: 60%;
 }

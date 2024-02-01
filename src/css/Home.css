@@ -188,3 +188,36 @@ div.statistic .chart-content h3 {
     color: var(--fonts);
     font-size: 14px;
 }
+
+@media only screen and (min-width: 600px) and (max-width: 799px) {
+    main#content > div.presentation {
+        background: var(--primary) url('../image/background-image-new.png') center right no-repeat;
+        background-size: cover;
+    }
+
+    div.container-graphics {
+        width: 100%;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
+        gap: 20px;
+    }
+
+    div.graphic {
+        width: 100%;
+        max-width: 60%;
+        height: 300px;
+        margin-top: 20px;
+        border-radius: 10px;
+        background-color: var(--menu-color);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0px 0px 4px #00000031;
+        transition: box-shadow 0.3s ease-in-out;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 10px;
+    }
+}
