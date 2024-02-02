@@ -71,6 +71,7 @@ div.presentation > a.day {
     border-radius: 10px;
     background-color: var(--primary);
     padding: 8px;
+    width: 150px;
     color: #fff;
     border: none;
     transition: background-color 0.3s ease-in-out;
@@ -78,7 +79,6 @@ div.presentation > a.day {
 
 div.presentation > a.day p {
     font-size: 12px;
-    margin: 0 5px;
 }
 
 div.presentation > a.day:hover {
@@ -189,7 +189,7 @@ div.statistic .chart-content h3 {
     font-size: 14px;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 799px) {
+@media only screen and (max-width: 799px) {
     main#content > div.presentation {
         background: var(--primary) url('../image/background-image-new.png') center right no-repeat;
         background-size: cover;
@@ -206,7 +206,7 @@ div.statistic .chart-content h3 {
 
     div.graphic {
         width: 100%;
-        max-width: 60%;
+        max-width: 70%;
         height: 300px;
         margin-top: 20px;
         border-radius: 10px;

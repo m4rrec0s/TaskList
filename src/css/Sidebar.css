@@ -1,55 +1,79 @@
-.barraLateral {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
-    height: 100vh;
-    background: linear-gradient(65deg, var(--menu-color), var(--menu-color-hover) 80%);
-    justify-content: space-between;
-    transition: all 0.5s ease-in-out;
-  }
+@keyframes sidebar-open {
+    0% {
+      width: 0;
+      height: 100vh;
+      left: 0; /* Ajuste para iniciar do lado esquerdo */
+    }
   
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-    margin-top: 10px;
+    100% {
+      width: 30%; /* Ajuste o tamanho desejado */
+      height: 100vh;
+      left: 0; /* Mantenha o lado esquerdo */
+    }
 }
 
-.line {
-    width: 25px;
-    height: 3px;
-    background-color: var(--fonts);
-    margin: 5px 0;
-}
-
-div.icones {
+div.barraLateral-2 {
+    position: fixed; /* Altere para fixed */
+    z-index: 99999;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    width: 30%;
+    height: 100vh;
+    background: var(--profile-color);
+    justify-content: space-between;
+    animation: sidebar-open 0.5s ease-in-out;
+    box-shadow: 0 0 30px 10px;
 }
 
-div.icones button, a {
+button#close-button-menu {
+    margin-top: 20px;
+    font-size: 30px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: var(--fonts);
+    transition: 0.3s;
+}
+
+button#close-button-menu:hover {
+    color: var(--hover-color);
+}
+
+div.icones-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+}
+
+div.icones-2 button, a {
     background: transparent;
     border: none;
-    padding: 10px;
+    text-decoration: none;
+    width: 90%;
     border-radius: 10px;
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+    color: var(--fonts);
+    display: flex;
+}
+
+div.icones-2 a > p {
+    margin-left: 10px;
+    font-size: 12px;
     color: var(--fonts);
 }
 
-div.icones button:hover, a:hover {
+div.icones-2 button:hover, a:hover {
     cursor: pointer;
     background: var(--hover-color);
 }
 
-div.exit {
+div.exit-2 {
     margin-bottom: 20px;
 }
 
-div.exit button {
+div.exit-2 button {
     background: transparent;
     border: none;
     padding: 10px;
@@ -59,30 +83,7 @@ div.exit button {
     font-size: 16px;
 }
 
-div.exit button:hover {
+div.exit-2 button:hover {
     cursor: pointer;
     background: var(--hover-color);
 }
-
-@media only screen and (max-width: 799px) {
-    .barraLateral.menuOpen {
-        width: 100%;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .icones.menuOpen {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .exit.menuOpen {
-        align-self: flex-end;
-    }
-}
-  

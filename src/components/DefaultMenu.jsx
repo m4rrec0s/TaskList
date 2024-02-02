@@ -19,8 +19,10 @@ import {
   faGear, 
   faPen, 
   faMoon, 
-  faSun 
+  faSun,
+  faBars 
 } from '@fortawesome/free-solid-svg-icons';
+import Sidebar from './Sidebar';
 
 const DefaultMenu = () => {
   // Light Mode 
@@ -33,9 +35,14 @@ const DefaultMenu = () => {
   const [notificationModalVisible, setNotificationModalVisible] = useState(false);
   const [settingsModalVisible, setSettingsModalVisible] = useState(false);
   const [profileContentModalVisible, setProfileContentModalVisible] = useState(false);
+  const [menuVisible, setmenuVisible] = useState(false);
 
   const openNotificationModal = () => {
     setNotificationModalVisible(true);
+  };
+
+  const openMenu = () => {
+    setmenuVisible(true);
   };
 
   const openSettingsModal = () => {
@@ -50,6 +57,7 @@ const DefaultMenu = () => {
     setNotificationModalVisible(false);
     setSettingsModalVisible(false);
     setProfileContentModalVisible(false);
+    setmenuVisible(false);
   };
 
   // pegar data e nome
@@ -63,6 +71,15 @@ const DefaultMenu = () => {
 
   return (
     <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+
+      <div className={`BarraLateral-hidden`}>
+        <h3>Task<strong>List</strong></h3>
+        <button className={`buttonBarraLateral`} onClick={openMenu}>
+          <FontAwesomeIcon icon={faBars} />
+        </button>
+      </div>
+
+      {menuVisible && <Sidebar onClose={closeModals} />}
 
       <div className="barraLateral">
         <h3>Task<strong>List</strong></h3>

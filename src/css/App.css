@@ -12,8 +12,13 @@ div.App {
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
+  height: 100vh;
   background-color: var(--back);
   transition: all 0.5s ease-in-out;
+}
+
+div.BarraLateral-hidden {
+  display: none;
 }
 
 div.barraLateral {
@@ -57,6 +62,7 @@ div.icones button, a {
 div.icones a > p {
   margin-left: 10px;
   font-size: 12px;
+  color: var(--fonts);
 }
 
 div.icones button:hover, a:hover {
@@ -356,6 +362,43 @@ button.add-new-task:hover {
   div.App > button.profile-content-button:hover {
     background-color: var(--hover-color);
   }
+
+  div.barraLateral {
+    display: none;
+  }
+
+  div.BarraLateral-hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  div.BarraLateral-hidden h3 {
+    color: var(--fonts);
+    font-size: 14px;
+  }
+
+  button.buttonBarraLateral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: transparent;
+    color: var(--fonts);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.5s;
+  }
+
+  button.buttonBarraLateral:hover {
+    background-color: var(--menu-color-hover);
+  }
+
 }
 
 /* Estilos para telas pequenas (ex: smartphones) */
@@ -397,8 +440,120 @@ button.add-new-task:hover {
     background-color: var(--hover-color);
   }
 
+  div.barraLateral {
+    display: none;
+  }
+
+  div.BarraLateral-hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  div.BarraLateral-hidden h3 {
+    color: var(--fonts);
+    font-size: 14px;
+  }
+
+  button.buttonBarraLateral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: transparent;
+    color: var(--fonts);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.5s;
+  }
+
+  button.buttonBarraLateral:hover {
+    background-color: var(--menu-color-hover);
+  }
 }
 
 @media only screen and (min-width: 400px) and (max-width: 599px) {
+  div.App > div.profile-content {
+    display: none;
+  }
+
+  div.App > button.profile-content-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    padding: 20px;
+    background-color: var(--menu-color);
+    border: none;
+    outline: none;
+    margin: 20px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease-in-out;
+    color: var(--primary);
+  }
+
+  div.App > button.profile-content-button > div.content-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--menu-color) url('../image/&.jpeg') center no-repeat;
+    background-size: cover;
+  }
+
+  div.App > button.profile-content-button h3 {
+    
+    margin-top: 10px;
+    color: var(--fonts);
+  }
+
+  div.App > button.profile-content-button:hover {
+    background-color: var(--hover-color);
+  }
+
+  div.barraLateral {
+    display: none;
+  }
+
+  div.BarraLateral-hidden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+
+  div.BarraLateral-hidden h3 {
+    color: var(--fonts);
+    font-size: 14px;
+  }
+
+  button.buttonBarraLateral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: transparent;
+    color: var(--fonts);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    transition: 0.5s;
+  }
+
+  button.buttonBarraLateral:hover {
+    background-color: var(--menu-color-hover);
+  }
+
+
+  button.buttonBarraLateral:hover {
+    background-color: var(--menu-color-hover);
+  }
 
 }
