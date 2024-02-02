@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import '../css/Sidebar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  
   faHome, 
@@ -11,22 +11,11 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const Sidebar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
 
   return (
-    <div className={`barraLateral ${menuOpen ? 'menuOpen' : ''}`}>
+    <div className="barraLateral-2">
         <h3>Task<strong>List</strong></h3>
-        <div className="hamburger" onClick={toggleMenu}>
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
-        </div>
-        <h3>Task<strong>List</strong></h3>
-        <div className={`icones ${menuOpen ? 'menuOpen' : ''}`}>
+        <div className="icones-2">
             <Link to="/">
                 <FontAwesomeIcon icon={faHome} />
             </Link>

@@ -63,23 +63,29 @@ const DefaultMenu = () => {
 
   return (
     <div className={`App ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+
       <div className="barraLateral">
         <h3>Task<strong>List</strong></h3>
         <div className= "icones">
           <Link to="/">
             <FontAwesomeIcon icon={faHome} />
+            <p>Home</p>
           </Link>
           <Link to="/tasks">
             <FontAwesomeIcon icon={faListCheck} />
+            <p>Workouts</p>
           </Link>
           <Link to="/graphics">
             <FontAwesomeIcon icon={faChartSimple} />
+            <p>Graphics</p>
           </Link>
           <Link to="/calendar">
             <FontAwesomeIcon icon={faCalendar} />
+            <p>Calendar</p>
           </Link>
           <Link to="/messages">
             <FontAwesomeIcon icon={faMessage} />
+            <p>Messages</p>
           </Link>
         </div>
         <div className="exit">
